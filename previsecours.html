@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EIG #2 - Prévisecours</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Entrepreneurs d'Intérêt Général #2</h3>
+					<h3>Défi Prévisecours</h3>
+					<p>
+						<a href="http://previsecours.fr">www.previsecours.fr</a><br><br>
+						Guillaume Lancrenon, Tiphaine Phe-Neau, <br>Daniel Ansellem et Fabien Antoine<br><br>
+
+						 Etalab <br> Ministère de l'Intérieur
+					</p>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Défi Prévisecours  (EIG #2)
+
+							Aider les sapeurs-pompiers à intervenir plus efficacement avec des modèles prédictifs
+							
+							- Modèle sur les volumes d’interventions et leurs géolocalisations pour anticiper les moyens à mobiliser
+							- Projet en partenariat avec les sapeurs-pompiers de l’Essonne 
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Entrepreneurs d'Interet general #2
+
+							### Pour Prévisecours
+
+							- 10 mois
+							- 2 profils
+								- full stack dev (Guillaume Lancrenon)
+								- data scientist (Tiphaine Phe-Neau @datatiph) 
+							- Etalab et Ministère de l'Intérieur
+							- Plus de détails sur la 2e promotion EIG http://dai.ly/x6fp47d
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### C'est sympa tout ça mais...
+
+							## Est ce possible?
+
+							### en 10 mois
+
+							- 2 personnes
+							- Partir de rien
+							- Récupérer les données administratives et ouvertes 
+							- Flux de normalisation et pérennisation 
+							- Sortir un produit utile et utilisable
+						</textarea>
+					</section>
+					
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Prévisecours... le début !
+
+							
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 1. Données interventions
+
+							<img width="600" data-src="img/interventions.png" alt="Screen interventions">
+
+							- Upload
+							- Aggrégation
+							- Anonymisation
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 2. Récupération open data
+
+							<img width="600" data-src="img/opendata.png" alt="Screen opendata">
+
+							- Call api via python
+							- Téléchargement direct
+							- Editable
+
+
+						</textarea>
+					</section>
+					
+					<section data-markdown>
+						<textarea data-template>
+							## 3. Feature engineering
+							<img width="600" data-src="img/featuring.png" alt="Screen feature engineering">
+
+							- Création de features après discussion métiers
+							- Jointures avec données interventions
+							
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Alors, on a quelque chose d'utilisable ou pas ?
+
+							
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 3. Premiers modèles
+
+							<img width="600" data-src="img/mling.png" alt="Prévisecours models">
+
+							- Model farming
+							- ROC AUC: 0.918 sans tweaking
+						</textarea>
+					
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## 4. POC visualisation
+
+							<img width="650" data-src="img/map.png" alt="Screen interventions">
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Timeline
+
+							1. Données métiers - 1 semaine
+							2. Open data - 1 semaine boostrap + ongoing
+							3. Feature engineering -  1 semaine
+							4. Model farming - 1 semaine en //
+							5. POC visualisation - 1 semaine en //
+							6. ...
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Workflow
+
+							<img width="850" data-src="img/workflow.png" alt="Screen interventions">
+
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## La suite?
+
+							<a href="http://previsecours.fr">www.previsecours.fr</a><br> @datatiph
+
+						</textarea>
+					</section>
+				</section>
+
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
