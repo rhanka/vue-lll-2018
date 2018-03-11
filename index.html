@@ -393,136 +393,106 @@
 						</textarea>
 					</section>
 				</section>
-				<section>	
+
+
+				<section>
 					<section data-background="img/background-datalab-dss.svg" data-markdown>
 						<textarea data-template>
-							### 3. Feature engineering / variables
-							<img width="600" data-src="img/featuring.png" alt="Screen feature engineering">
-
-							- Création de features après discussions métiers
-							- Jointures avec les données interventions
-							
+							Cas d'usage n°3 <br/>
+							<img width="200" src="img/previsecours_logo.png"><br/>
+							**opendata et machine learning**<br/>
+							<small>
+							aider les sapeurs-pompiers à intervenir plus efficacement avec des modèles prédictifs
+							</small>
 						</textarea>
 					</section>
-					<section data-markdown>
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
 						<textarea data-template>
-							## Alors, <br> au bout d'un mois <br>a-t-on quelque chose ?
+							 <img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
+							<br/><small>défi 2017</small>
+							<iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x6fp47d" allowfullscreen allow="autoplay"></iframe>
 						</textarea>
 					</section>
-					<section data-markdown>
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
 						<textarea data-template>
-							### 4. Machine learning : modèles v0
+							<img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
+							#### défi 2017
+							aider les sapeurs-pompiers à intervenir plus efficacement avec des modèles prédictifs
+							<small>
+							- modèle sur les volumes d’interventions et leurs géolocalisations pour anticiper les moyens à mobiliser
+							- en partenariat avec les sapeurs-pompiers de l’Essonne
+							- focus sur le secours aux personnes, puis les départs d'incendie 
 
-							<img width="600" data-src="img/mling.png" alt="Prévisecours models">
+							</small>
+						</textarea>
+					</section>			
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
+						<textarea data-template>
+							**REPONSE AU DÉFI**
+							<small>
+							- données opendata : 
+							<small>INSEE population, ménages, scolarisation, IDH2, Pollens, pollution, transports, Calendrier, météo </small>
+							- données d'intervention : ~ 90k
+							- featuring et modélisation avec **Dataiku**
+							- POC/webapp avec **Dataiku** puis Vue.js
 
-							- Model farming 
+							</small>
+							<img height=180 src="img/interventions.png"/>
+							<img height=180 src="img/opendata.png"/>
+							<img height=180 src="img/featuring.png"/>
+						</textarea>
+					</section>
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
+						<textarea data-template>
+							le workflow de prévisecours
+							<img height=500 src="img/workflow-previsecours.png"/>
+						</textarea>
+					</section>
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
+						<textarea data-template>
+							### Résultats en 1 mois
+
 							- ROC AUC: 0.918 sans tweaking
-						</textarea>
-					
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							### 5. POC visualisation
+							- POC visualisation
 
-							<img width="650" data-src="img/map.png" alt="Screen interventions">
-						</textarea>
-					</section>
+							<img height=250 src="img/mling.png"/>
+							<img height=250 =200 src="img/map.png"/>
 
-					<section data-markdown>
-						<textarea data-template>
-							### 5. POC visualisation
-							#### Interventions par commune
-							<iframe id="freshwidget-frame" src="https://algo.previsecours.fr/dip/api/webapps/view?projectKey=PRVISECOURSVISUALISATION&webAppId=kwi1cbb&apiKey=nJxRZkRr0NK7sBS3gOSBKIVipz8Q5G6W" scrolling="auto" allowtransparency="true" style="height: 500px; width: 100%;" frameborder="0"> </div></iframe>
+							[https://previsecours.fr](https://previsecours.fr)
+
+
 						</textarea>
 					</section>
-
-					<section data-markdown>
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
 						<textarea data-template>
-							### 5. POC visualisation
-							#### Evolution des interventions par commune
+							### POC
+							#### évolution des interventions par commune
+							
 							<iframe id="freshwidget-frame" src="https://algo.previsecours.fr/dip/api/webapps/view?projectKey=PRVISECOURSVISUALISATION&webAppId=W0kS5vF&apiKey=932QkDr6PUcppTtKPUfoDWlOM8BHhSz6" scrolling="auto" allowtransparency="true" style="height: 500px; width: 100%;" frameborder="0"> </div></iframe>
+
+
 						</textarea>
-					</section>
-
-				
-					<section data-markdown>
+					</section>	
+					<section data-background="img/background-datalab-dss.svg" data-markdown>
 						<textarea data-template>
-							## Workflow
+							### Bénéfices avec Dataiku
 
-							<img width="850" data-src="img/workflow.png" alt="Screen workflow">
+							<small>
+							- accélérer l'exploitation de l'opendata
+							- tester l'impact des variables avec le machine learning
+							- expérimenter l'usage prévisions avec les web app
+ 
+							</small>
 
+							pour le métier du secours
+							<small>
+							- premiers résultats en 1 mois
+							- accès aux résultats en direct
+
+							</small>
 						</textarea>
 					</section>
 				</section>
-				<section>
-					<section id="timeline" data-markdown>
-						<textarea data-template>
-							## Timeline au bout de <br>1 mois
-							<p>
-								<span style="float:left" class="fragment">
-									1. Données métiers - 1 semaine
-								</span> 
-								<span style="float:left" class="fragment">
-									2. Open data - 1 semaine pour la base + en cours
-								</span> 
-								<span style="float:left" class="fragment">
-									3. Feature engineering sur la base -  1 semaine
-								</span> 
-								<span style="float:left" class="fragment">
-									4. Model farming - 1 semaine en //
-								</span> 
-								<span style="float:left" class="fragment">
-									5. POC visualisation - 1 semaine en //
-								</span> 
-							</p>
-						</textarea>
-					</section>
-
-				</section>
-				<section>
-					<section data-markdown>
-						<textarea data-template>
-							## Prévisecours... <br>La suite?
-
-							<a target="_blank" href="http://previsecours.fr">www.previsecours.fr</a><br> 
-							<a target="_blank" href="https://twitter.com/datatiph">@datatiph</a>
-
-						</textarea>
-					</section>
-					<section data-markdown data-background="img/previsecours_team.jpg">
-						<textarea data-template>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							### Team Prévisecours / EIG #2
-						</textarea>
-					</section>
-					<section data-background="https://media2.giphy.com/media/ct1QrPXPkSEgg/giphy.gif" data-markdown>
-						<textarea data-template>
-
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						### En attendant, on continue de travailler...
-
-						</textarea>
-					</section>
-					
-				</section>
-
 				
 
 			</div>
