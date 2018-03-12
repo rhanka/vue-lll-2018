@@ -1,602 +1,599 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-
-		<title>Salon Big Data - Dataiku</title>
-
-		<meta name="description" content="accélérer la valorisation des données au Ministère de l'Intérieur avec Dataiku">
-		<meta name="author" content="Fabien ANTOINE">
-
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section data-background="img/background-valdon-dss.svg">
-					<h4>Accélérer la valorisation des données<br/><br/></h4>
-					<p><img width="200" style="background-color:white;border : 0;" data-src="img/datascience.png" alt="datascience"></p>
-					<small> <br/>
-						Fabien Antoine<br>
-
-						<small>Ministère de l'Intérieur</small>
-					</small>
-				</section>
-
-				<section>
-					<section data-background="img/background-MI-dss.svg" data-markdown>
-						<textarea data-template>
-							#### ministère de l'Intérieur
-							## les missions
-
-							- relation état/collectivités : intégrité des institutions, libertés locales							
-							- sécurité des citoyens et des biens : libertés publiques (suffrages), risques et fléaux (sécurité intérieure, sécurité civile, sécurité routière ...)
-						</textarea>
-					</section>
-					<section data-background="img/background-MI-dss.svg" data-markdown>
-						<textarea data-template>
-							#### ministère de l'Intérieur
-							## les données
-
-							- personnes physiques et morales (identifier / habiliter / contrôler / signaler / rechercher) 
-							- objets vecteurs de risques de sécurité (habilitations : armes, véhicules)
-							- objets connectés (radars, passages frontières, mobilité police/gendarmerie, sirenes ...)
-						</textarea>
-					</section>
-					<section data-background="img/background-MI-dss.svg" data-markdown>
-						<textarea data-template>
-							#### ministère de l'Intérieur
-							## les enjeux data
-
-							**not so big data**
-
-							- éthique : séparation des **données personnelles** par finalité 
-							plus de 30 fichiers suivis par décrets
-							- **variété** :identités, véhicules, PVs, passages frontières
-							- volumes : **10 à 500 millions** par fichier 
-							- vélocité : &lt; 1h, mais **pas à la seconde** (e.g signalements attentats)
-
-						</textarea>
-					</section>
-				</section>
-				<section>		
-					<section data-background="img/background-valdon-dss.svg" data-markdown>
-						<textarea data-template>
-							#### mission de valorisation des données
-							### gouvernance
-							<br/>
-							- référentiels des données : diffusion et bonnes pratiques
-							Etalab, INSEE, IGN, DGFIP, internes
-							- cartographie des données, RGPD
-							- réseau d’administrateurs / cas d’usage
-							- promouvoir / normer les technologies d’analyse/IA
-
-						</textarea>
-					</section>
-					<section data-background="img/background-valdon-dss.svg" data-markdown>
-						<textarea data-template>
-							#### mission de valorisation des données
-							### proof of concepts
-							<br/>
-							- videoprotection
-							- matching d’identité (~ 20 millions x 50 millions)
-							- géodécisionnel cartAV – accidents/verbalisation
-							- lutte contre la fraude aux immatriculations
-							- prévisecours - prévoir les effectifs des pompiers pour les secours 
-
-						</textarea>
-					</section>
-				</section>
-
-				<section>
-					<section data-background="img/background-MI-dss.svg" data-markdown>
-						<textarea data-template>
-							#### les débuts avec Dataiku
-
-							mi-2016, le ministère a fait de la **lutte contre la fraude aux titres** une priorité, dans le cadre de la réforme des **préfectures nouvelles génération** <br/>
-							<span class="fragment">
-								<br/><small>des **délais ultra-contraints** : production mi-2017</small>
-								<br/><small> de nombreuses pistes présenties (30 cas d'usage)
-								</small>
-								<br/><small>	... mais aucun traitement informatique existant</small>
-							</span>
-							<span class="fragment">
-								<br/>une **itérativité** indispensable
-							</span>
-
-						</textarea>
-					</section>
-					<section data-background="img/background-MI-dss.svg" data-markdown>
-						<textarea data-template>
-							#### le projet **SELFIM** 
-							<small>fraude aux immatriculations</small>
-							#### a choisi Dataiku
-							<small>pour réduire ses risques</small>
-
-							#### résultats
-							<small>POC de 3 mois (3 cas d'usages) pour **convaincre** </small>
-							<small>Réalisation et mise en production de **10 cas d'usages en 9 mois**</small>
-							<small>Après 9 mois d'usage, nombreuses **fraudes avérées**</small>
-							<small>véhicules détruit réimportés / fraude éco-taxe</small> 
-						</textarea>
-					</section>
-				</section>
-				<section>
-					<section data-background="img/background-valdon-dss.svg" data-markdown>
-						<textarea data-template>
-							<small>en parallèle, mi-2016 la mission de gouvernance crée le</small><br/>
-							<img width="200" data-src="img/datalab-round.png" style="border:0;"alt="datalab">
-							<br/>
-							<small> en co-construction avec **SELFIM**, le datalab réutilise **Dataiku**</small>
-						</textarea>
-					</section>
-
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							#### cas d'usages complets
-
-							<br/>
-							matching flou d'identités <small>(dizaines de millions à croiser)</small>
-							<br/>
-
-							géodécisionnel accident-verbalisation pour la police <small> (dizaines de millions d'événements)</small>
-						</textarea>
-					</section>
-
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-						migrer du *reporting* <br/>
-						vers la **valorisation de données**
-
-						<br/>
-						enrichir et analyser la donnée
-							<br/><small> géocodage, croisements opendata 
-							<br/>qualité de données, aggrégations, analytique
-							<br/> machine learning </small>
-
-						<br/>
-						domaines
-						<br/><small> contrôle frontière, élections, 
-						<br/>éducation routière, permis de conduire,
-						<br/> véhicules, armes </small>
-
-
-						</textarea>
-					</section>
-				</section>
-				<section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							Cas d'usage n°1 <br/>
-							<img width="600" src="img/matchID-logo.svg"><br/>
-							**fuzzy matching et machine learning**<br/>
-							<small>
-							réconciliation d'états civils dans les bases étatiques 
-							</small>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							 <img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
-							<br/><small>défi 2017</small>
-							<iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x5ciua7" allowfullscreen allow="autoplay"></iframe>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							<img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
-							#### défi 2017
-							le système des permis de conduire SNPC n’invalidait pas les permis des conducteurs après leur décès
-							<small>
-							- Quelle est la part de décédés au SNPC ?
-							- Quelle est la quantité de retraits de points attribués à des personnes décédées ?
-							- Y’a-t-il des délivrances de permis de conduire à des personnes décédées ?
-
-							**Bonus** : Existe-t-il des personnes possédant plusieurs permis ?
-							</small>
-						</textarea>
-					</section>			
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							#### réponse au défi
-							
-							<small>
-							- préparer et redresser la donnée INSEE (22M) et SNPC (56M)
-							- croiser les bases de données avec des techniques de matching flou
-							- attribuer un score de confiance à chaque réconciliation d’identités
-							- itérer avec de l’apprentissage automatique
-
-							</small>
-							<img height=200 src="img/workflow-matchID-dss.png"/>
-							<br/>
-							<small>
-							les outils : Dataiku (workflow), Vertica, Elasticsearch (*fuzzy match*)
-							</small>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							<img height=500 src="img/workflow-matchID.png"/>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Résultats
-
-							- 30% de correspondances strictes
-							- 66% avec un aléa mineur <small>(trait d'union, un seul prénom)</small>
-							- 95% après process Dataiku
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Timing
-							
-							- premiers résultats en 15j
-							- puis amélioration avec le *fuzzy matching* (1 mois)
-							- analyse d'impact sur le permis de conduire(2 mois)
-							- développement d'un logiciel libre pour la généralisation (6 mois)
-
-							<img width="400" src="img/matchID-logo.svg"><br/>
-							[https://matchid-project.github.io/](https://matchid-project.github.io/)
-
-						</textarea>
-					</section>	
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Bénéfices avec Dataiku
-
-							en amont de la réalisation d'un logiciel dédié
-							<small>
-							- mettre au point le workflow de traitement
-							- tester différentes solutions de jointure (SQL, elasticsearch)
-							- évaluer l'opportunité du machine learning, et le bon modèle
-							- développement en 2j d'une webapp pour les annotations
-
-							</small>
-
-							pour le métier du permis de conduire
-							<small>
-							- progressivité des résultats
-							- analyser l'impact rapidement
-
-							</small>
-						</textarea>
-					</section>
-				</section>
-				<section>	
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							Cas d'usage n°2 <br/>
-							<img width="600" src="img/cartav.svg"><br/>
-							**géocodage avancé**<br/>
-							<small>
-							 croiser les données d’accidentalité avec les données de verbalisation pour réaliser un outil de cartographie décisionnelle
-							</small>
-						</textarea>
-					</section>							
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							 <img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
-							<br/><small>défi 2017</small>
-							<iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x5ciq09" allowfullscreen allow="autoplay"></iframe>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							<img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
-							#### défi 2017
-							**croiser** les données d’accidentalité avec les données de verbalisation pour réaliser un outil de **cartographie** décisionnelle
-							<br/>
-							<br/>
-							<small>
-							accidents et verbalisation à **enrichir géographiquement** <small> (géocodage d'adresses, projection sur les routes)</small>
-							<br/>
-							<br/>
-							pour permettre aux forces de polices de **mieux orienter les verbalisations** vis à vis des accidents
-
-							</small>
-						</textarea>
-					</section>			
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							#### réponse au défi avec Dataiku
-							
-							<small>
-							- mise en forme des données accidents et verbalisation
-							- géocodage avec BAN et BANO (géocodage Etalab), **plugin** Dataiku
-							- projections sur routes (données IGN) avec PostGis
-							- présentation des données avec Elasticsearch
-
-							</small>
-							<img height=300 src="img/workflow-cartav.jpeg"/>
-							<br/>
-
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							<img height="30" src="img/cartav.svg"><br/> 
-
-							<iframe width="854" height="480" src="https://www.youtube.com/embed/YXdVgf2px_I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-							<smal><small>réalisé avec Vue.js</small></smal>
-
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Résultats
-
-							- première maquette en 1 mois
-							- première expérimentation du prototype en 10 mois
-							- généralisation en cours (12 mois)
-
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Timing
-
-							- première maquette en 1 mois
-							- première expérimentation du prototype en 10 mois
-							- généralisation en cours (12 mois)
-
-							<br/>
-							<img height="30" src="img/cartav.svg"><br/> 
-							<small>[https://github.com/entrepreneur-interet-general/cartav](https://github.com/entrepreneur-interet-general/cartav)</small>
-
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Bénéfices avec Dataiku
-
-							accompagner la réalisation d'une application d'aide à la décision
-							<small>
-							- variété des traitement de géocodage (appel API, PostGis)
-							- mettre au point le meilleur processus de géocodage
-							- évaluer la performance des traitements avec les **analyses**
-
-							</small>
-
-							pour le métier de la sécurité routière
-							<small>
-							- progressivité des résultats
-							- données de meilleure qualité = meilleure compréhension de la situation des accidents
-
-							</small>
-						</textarea>
-					</section>
-				</section>
-
-
-				<section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							Cas d'usage n°3 <br/>
-							<img width="200" src="img/previsecours_logo.png"><br/>
-							**opendata et machine learning**<br/>
-							<small>
-							aider les sapeurs-pompiers à intervenir plus efficacement avec des modèles prédictifs
-							</small>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							 <img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
-							<br/><small>défi 2017</small>
-							<iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x6fp47d" allowfullscreen allow="autoplay"></iframe>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							<img width="300" data-src="img/eig_logo.png" alt="EIG logo"> 
-							#### défi 2017
-							aider les sapeurs-pompiers à intervenir plus efficacement avec des modèles prédictifs
-							<small>
-							- modèle sur les volumes d’interventions et leurs géolocalisations pour anticiper les moyens à mobiliser
-							- en partenariat avec les sapeurs-pompiers de l’Essonne
-							- focus sur le secours aux personnes, puis les départs d'incendie 
-
-							</small>
-						</textarea>
-					</section>			
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							**REPONSE AU DÉFI**
-							<small>
-							- données opendata : 
-							<small>INSEE population, ménages, scolarisation, IDH2, Pollens, pollution, transports, Calendrier, météo </small>
-							- données d'intervention : ~ 90k
-							- featuring et modélisation avec **Dataiku**
-							- POC/webapp avec **Dataiku** puis Vue.js
-
-							</small>
-							<img height=180 src="img/interventions.png"/>
-							<img height=180 src="img/opendata.png"/>
-							<img height=180 src="img/featuring.png"/>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							le workflow de prévisecours
-							<img height=500 src="img/workflow-previsecours.png"/>
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Résultats en 1 mois
-
-							- ROC AUC: 0.918 sans tweaking
-							- POC visualisation
-
-							<img height=250 src="img/mling.png"/>
-							<img height=250 =200 src="img/map.png"/>
-
-							[https://previsecours.fr](https://previsecours.fr)
-
-
-						</textarea>
-					</section>
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### POC
-							#### évolution des interventions par commune
-							
-							<iframe id="freshwidget-frame" src="https://algo.previsecours.fr/dip/api/webapps/view?projectKey=PRVISECOURSVISUALISATION&webAppId=W0kS5vF&apiKey=932QkDr6PUcppTtKPUfoDWlOM8BHhSz6" scrolling="auto" allowtransparency="true" style="height: 500px; width: 100%;" frameborder="0"> </div></iframe>
-
-
-						</textarea>
-					</section>	
-					<section data-background="img/background-datalab-dss.svg" data-markdown>
-						<textarea data-template>
-							### Bénéfices avec Dataiku
-
-							<small>
-							- accélérer l'exploitation de l'opendata
-							- tester l'impact des variables avec le machine learning
-							- expérimenter l'usage prévisions avec les web app
+    <head>
+        <meta charset="utf-8">
+
+        <title>Salon Big Data - Dataiku</title>
+
+        <meta name="description" content="accélérer la valorisation des données au Ministère de l'Intérieur avec Dataiku">
+        <meta name="author" content="Fabien ANTOINE">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="img/background-valdon-dss.svg" data-markdown>
+                    <textarea data-template>
+                    ### Accélérer la valorisation des données
+                    <img width="180" style="background-color:white;border : 0;" data-src="img/datascience.png" alt="datascience">
+
+                    Fabien Antoine<br>
+                    Ministère de l'Intérieur
+                    </textarea>   
+                </section>
+
+                <section>
+                    <section data-background="img/background-MI-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ## les missions
+
+                            - relation état/collectivités : intégrité des institutions, libertés locales                           
+                            - sécurité des citoyens et des biens : libertés publiques (suffrages), risques et fléaux (sécurité intérieure, sécurité civile, sécurité routière ...)
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-MI-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ## les données
+
+                            - personnes physiques et morales (identifier / habiliter / contrôler / signaler / rechercher)
+                            - objets vecteurs de risques de sécurité (habilitations : armes, véhicules)
+                            - objets connectés (radars, passages frontières, mobilité police/gendarmerie, sirenes ...)
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-MI-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ## les enjeux data
+
+                            **not so big data**
+
+                            - éthique : séparation des **données personnelles** par finalité
+                            plus de 30 fichiers suivis par décrets
+                            - **variété** : identités, véhicules, PVs, passages frontières
+                            - volumes : **10 à 500 millions** par fichier
+                            - vélocité : &lt; 1h, mais **pas à la seconde** (e.g signalements attentats)
+
+                        </textarea>
+                    </section>
+                </section>
+                <section>       
+                    <section data-background="img/background-valdon-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### mission de valorisation des données
+                            ### gouvernance
+                            <br/>
+                            - référentiels des données : diffusion et bonnes pratiques
+                            Etalab, INSEE, IGN, DGFIP, internes
+                            - cartographie des données, RGPD
+                            - réseau d’administrateurs / cas d’usages
+                            - promouvoir / normer les technologies d’analyse/IA
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-valdon-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### mission de valorisation des données
+                            ### proof of concepts
+                            <br/>
+                            - vidéoprotection
+                            - matching d’identité (~ 20 millions x 50 millions)
+                            - géodécisionnel cartAV – accidents/verbalisation
+                            - lutte contre la fraude aux immatriculations
+                            - prévisecours - prévoir les effectifs des pompiers pour les secours
+
+                        </textarea>
+                    </section>
+                </section>
+
+                <section>
+                    <section data-background="img/background-MI-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### les débuts avec Dataiku
+
+                            mi-2016, le ministère a fait de la **lutte contre la fraude aux titres** une priorité, dans le cadre de la réforme des **préfectures nouvelles génération** <br/>
+                            <span class="fragment">
+                                <br/><small>des **délais ultra-contraints** : production mi-2017</small>
+                                <br/><small> de nombreuses pistes présenties (30 cas d'usages)
+                                </small>
+                                <br/><small>    ... mais aucun traitement informatique existant</small>
+                            </span>
+                            <span class="fragment">
+                                <br/>une **itérativité** indispensable
+                            </span>
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-MI-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### le projet **SELFIM**
+                            <small>fraude aux immatriculations</small>
+                            #### a choisi Dataiku
+                            <small>pour réduire ses risques</small>
+
+                            #### résultats
+                            <small>POC de 3 mois (3 cas d'usages) pour **convaincre** </small>
+                            <small>Réalisation et mise en production de **10 cas d'usages en 9 mois**</small>
+                            <small>Après 9 mois d'usage, nombreuses **fraudes avérées**</small>
+                            <small>véhicules détruit réimportés / fraude écotaxe</small>
+                        </textarea>
+                    </section>
+                </section>
+                <section>
+                    <section data-background="img/background-valdon-dss.svg" data-markdown>
+                        <textarea data-template>
+                            <small>en parallèle, mi-2016 la mission de gouvernance crée le</small><br/>
+                            <img width="200" data-src="img/datalab-round.png" style="border:0;"alt="datalab">
+                            <br/>
+                            <small> en co-construction avec **SELFIM**, le datalab réutilise **Dataiku**</small>
+                        </textarea>
+                    </section>
+
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### cas d'usages complets
+
+                            <br/>
+                            matching flou d'identités <small>(dizaines de millions à croiser)</small>
+                            <br/>
+
+                            géodécisionnel accident-verbalisation pour la police <small> (dizaines de millions d'événements)</small>
+                        </textarea>
+                    </section>
+
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                        migrer du *reporting* <br/>
+                        vers la **valorisation de données**
+
+                        <br/>
+                        enrichir et analyser la donnée
+                            <br/><small> géocodage, croisements opendata
+                            <br/>qualité de données, aggrégations, analytique
+                            <br/> machine learning </small>
+
+                        <br/>
+                        domaines
+                        <br/><small> contrôle frontière, élections,
+                        <br/>éducation routière, permis de conduire,
+                        <br/> véhicules, armes </small>
+
+
+                        </textarea>
+                    </section>
+                </section>
+                <section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            Cas d'usage n°1 <br/>
+                            <img width="600" src="img/matchID-logo.svg"><br/>
+                            **fuzzy matching et machine learning**<br/>
+                            <small>
+                            réconciliation d'états civils dans les bases étatiques
+                            </small>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                             <img width="300" data-src="img/eig_logo.png" alt="EIG logo">
+                            <br/><small>défi 2017</small>
+                            <iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x5ciua7" allowfullscreen allow="autoplay"></iframe>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            <img width="300" data-src="img/eig_logo.png" alt="EIG logo">
+                            #### défi 2017
+                            le système des permis de conduire SNPC n’invalidait pas les permis des conducteurs après leur décès
+                            <small>
+                            - Quelle est la part de décédés au SNPC ?
+                            - Quelle est la quantité de retraits de points attribués à des personnes décédées ?
+                            - Y’a-t-il des délivrances de permis de conduire à des personnes décédées ?
+
+                            **Bonus** : Existe-t-il des personnes possédant plusieurs permis ?
+                            </small>
+                        </textarea>
+                    </section>           
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### réponse au défi
+                           
+                            <small>
+                            - préparer et redresser la donnée INSEE (22M) et SNPC (56M)
+                            - croiser les bases de données avec des techniques de matching flou
+                            - attribuer un score de confiance à chaque réconciliation d’identités
+                            - itérer avec de l’apprentissage automatique
+
+                            </small>
+                            <img height=200 src="img/workflow-matchID-dss.png"/>
+                            <br/>
+                            <small>
+                            les outils : Dataiku (workflow), Vertica, Elasticsearch (*fuzzy match*)
+                            </small>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            <img height=500 src="img/workflow-matchID.png"/>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Résultats
+
+                            - 30% de correspondances strictes
+                            - 66% avec un aléa mineur <small>(trait d'union, un seul prénom)</small>
+                            - 95% après process Dataiku
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Timing
+                           
+                            - premiers résultats en 15j
+                            - puis amélioration avec le *fuzzy matching* (1 mois)
+                            - analyse d'impact sur le permis de conduire(2 mois)
+                            - développement d'un logiciel libre pour la généralisation (6 mois)
+
+                            <img width="400" src="img/matchID-logo.svg"><br/>
+                            [https://matchid-project.github.io/](https://matchid-project.github.io/)
+
+                        </textarea>
+                    </section>   
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Bénéfices avec Dataiku
+
+                            en amont de la réalisation d'un logiciel dédié
+                            <small>
+                            - mettre au point le workflow de traitement
+                            - tester différentes solutions de jointure (SQL, elasticsearch)
+                            - évaluer l'opportunité du machine learning, et le bon modèle
+                            - développement en 2j d'une webapp pour les annotations
+
+                            </small>
+
+                            pour le métier du permis de conduire
+                            <small>
+                            - progressivité des résultats
+                            - analyser l'impact rapidement
+
+                            </small>
+                        </textarea>
+                    </section>
+                </section>
+                <section>   
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            Cas d'usage n°2 <br/>
+                            <img width="600" src="img/cartav.svg"><br/>
+                            **géocodage avancé**<br/>
+                            <small>
+                             croiser les données d’accidentalité avec les données de verbalisation <br>pour réaliser un outil de cartographie décisionnelle
+                            </small>
+                        </textarea>
+                    </section>                           
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                             <img width="300" data-src="img/eig_logo.png" alt="EIG logo">
+                            <br/><small>défi 2017</small>
+                            <iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x5ciq09" allowfullscreen allow="autoplay"></iframe>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            <img width="300" data-src="img/eig_logo.png" alt="EIG logo">
+                            #### défi 2017
+                            **croiser** les données d’accidentalité avec les données de verbalisation pour réaliser un outil de **cartographie** décisionnelle
+                            <br/>
+                            <br/>
+                            <small>
+                            accidents et verbalisation à **enrichir géographiquement** <small> (géocodage d'adresses, projection sur les routes)</small>
+                            <br/>
+                            <br/>
+                            pour permettre aux forces de polices de **mieux orienter les verbalisations** vis à vis des accidents
+
+                            </small>
+                        </textarea>
+                    </section>           
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            #### réponse au défi avec Dataiku
+                           
+                            <small>
+                            - mise en forme des données accidents et verbalisation
+                            - géocodage avec BAN et BANO (géocodage Etalab), **plugin** Dataiku
+                            - projections sur routes (données IGN) avec PostGis
+                            - présentation des données avec Elasticsearch
+
+                            </small>
+                            <img height=300 src="img/workflow-cartav.jpeg"/>
+                            <br/>
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            <img height="30" src="img/cartav.svg"><br/>
+
+                            <iframe width="854" height="480" src="https://www.youtube.com/embed/YXdVgf2px_I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <smal><small>réalisé avec Vue.js</small></smal>
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Résultats
+
+                            - première maquette en 1 mois
+                            - première expérimentation du prototype en 10 mois
+                            - généralisation en cours (12 mois)
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Timing
+
+                            - première maquette en 1 mois
+                            - première expérimentation du prototype en 10 mois
+                            - généralisation en cours (12 mois)
+
+                            <br/>
+                            <img height="30" src="img/cartav.svg"><br/>
+                            <small>[https://github.com/entrepreneur-interet-general/cartav](https://github.com/entrepreneur-interet-general/cartav)</small>
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Bénéfices avec Dataiku
+
+                            accompagner la réalisation d'une application d'aide à la décision
+                            <small>
+                            - variété des traitement de géocodage (appel API, PostGis)
+                            - mettre au point le meilleur processus de géocodage
+                            - évaluer la performance des traitements avec les **analyses**
+
+                            </small>
+
+                            pour le métier de la sécurité routière
+                            <small>
+                            - progressivité des résultats
+                            - données de meilleure qualité = meilleure compréhension de la situation des accidents
+
+                            </small>
+                        </textarea>
+                    </section>
+                </section>
+
+
+                <section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            Cas d'usage n°3 <br/>
+                            <img width="200" src="img/previsecours_logo.png"><br/>
+                            **opendata et machine learning**<br/>
+                            <small>
+                            aider les sapeurs-pompiers à intervenir plus<br> efficacement avec des modèles prédictifs
+                            </small>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                             <img width="300" data-src="img/eig_logo.png" alt="EIG logo">
+                            <br/><small>défi 2018</small>
+                            <iframe frameborder="0" width="800" height="448" src="https://www.dailymotion.com/embed/video/x6fp47d" allowfullscreen allow="autoplay"></iframe>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            <img width="300" data-src="img/eig_logo.png" alt="EIG logo">
+                            #### défi 2018
+                            aider les sapeurs-pompiers à intervenir plus efficacement avec des modèles prédictifs
+                            <small>
+                            - modèle sur les volumes d’interventions et leurs géolocalisations pour anticiper les moyens à mobiliser
+                            - en partenariat avec les sapeurs-pompiers de l’Essonne
+                            - focus sur le secours aux personnes, puis les départs d'incendie
+
+                            </small>
+                        </textarea>
+                    </section>           
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            **REPONSE AU DÉFI**
+                            <small>
+                            - données opendata :
+                            <small>INSEE population, ménages, scolarisation, IDH2, pollens, pollution, transports, calendrier, météo </small>
+                            - données d'intervention : ~ 90k / an
+                            - featuring et modélisation avec **Dataiku**
+                            - POC/webapp avec **Dataiku** puis Vue.js
+
+                            </small>
+                            <img height=180 src="img/interventions.png"/>
+                            <img height=180 src="img/opendata.png"/>
+                            <img height=180 src="img/featuring.png"/>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            le workflow de prévisecours
+                            <img height=500 src="img/workflow-previsecours.png"/>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Résultats en 1 mois
+
+                            - ROC AUC: 0.918 sans tweaking
+                            - POC visualisation
+
+                            <img height=250 src="img/mling.png"/>
+                            <img height=250 =200 src="img/map.png"/>
+
+                            [https://previsecours.fr](https://previsecours.fr)
+
+
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### POC
+                            #### évolution des interventions par commune
+                           
+                            <iframe id="freshwidget-frame" src="https://algo.previsecours.fr/dip/api/webapps/view?projectKey=PRVISECOURSVISUALISATION&webAppId=W0kS5vF&apiKey=932QkDr6PUcppTtKPUfoDWlOM8BHhSz6" scrolling="auto" allowtransparency="true" style="height: 500px; width: 100%;" frameborder="0"> </div></iframe>
+
+
+                        </textarea>
+                    </section>   
+                    <section data-background="img/background-datalab-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Bénéfices avec Dataiku
+
+                            <small>
+                            - accélérer l'exploitation de l'opendata
+                            - tester l'impact des variables avec le machine learning
+                            - expérimenter l'usage prévisions avec les web app
  
-							</small>
+                            </small>
 
-							pour le métier du secours
-							<small>
-							- premiers résultats en 1 mois
-							- accès aux résultats en direct
+                            pour le métier du secours
+                            <small>
+                            - premiers résultats en 1 mois
+                            - accès aux résultats en direct
 
-							</small>
-						</textarea>
-					</section>
-				</section>
-				<section>
-					<section data-background="img/background-MI-dss.svg" data-markdown>
-						<textarea data-template>
-							### Résultats avec Dataiku
-							#### au ministère de l'Intérieur
+                            </small>
+                        </textarea>
+                    </section>
+                </section>
+                <section>
+                    <section data-background="img/background-MI-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Résultats avec Dataiku
+                            #### au ministère de l'Intérieur
 
-							<small>
-							- **fraude** aux immatriculations (10 cas métiers)
-							- fraude aux examen du permis de conduire (3 cas métiers)
-							- croisements d'identité avec **machine learning** sur 5 cas
-							- **géocodage avancé** systématisé des données (7 cas)
-							- **prévision** des effectifs (3 cas métiers)
-							
-							</small>
-							<br/>
-							en seulement **18 mois** <br/>
-							<small>à ressources contraintes (4 datascientists) </small>
-						</textarea>
-					</section>
-					<section data-background="img/background-valdon-dss.svg" data-markdown>
-						<textarea data-template>
-							### Bénéfices avec Dataiku
-							<small>
-							travail collaboratif des **compétences** <br/>
-							<small> statisticiens (R), géomaticiens (PostGIS), informaticiens (SQL), programmeurs (Python), analystes (SQL) </small>
+                            <small>
+                            - **fraude** aux immatriculations (10 cas métiers)
+                            - fraude aux examen du permis de conduire (3 cas métiers)
+                            - croisements d'identité avec **machine learning** (5 cas)
+                            - **géocodage avancé** systématisé des données (7 cas)
+                            - **prévision** des effectifs (3 cas métiers)
+                           
+                            </small>
+                            <br/>
+                            en seulement **18 mois** <br/>
+                            <small>à ressources contraintes (4 data scientists) </small>
+                        </textarea>
+                    </section>
+                    <section data-background="img/background-valdon-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Bénéfices avec Dataiku
+                            <small>
+                            travail collaboratif des **compétences** <br/>
+                            <small> statisticiens (R), géomaticiens (PostGIS), informaticiens (SQL), programmeurs (Python), analystes (SQL) </small>
 
-							favorise l'**évaluation déterministe** <br/>
-							<small>machine learning accessible et **opportuniste**, matrices de coûts, impact des variables, optimisation des ressources de calcul</small>
+                            favorise l'**évaluation déterministe** <br/>
+                            <small>machine learning accessible et **opportuniste**, matrices de coûts, impact des variables, optimisation des ressources de calcul</small>
 
-							audit de la qualité des données <br/>
-							<small>utilisation des graphiques à chaque étapes des traitements</small>
+                            audit de la qualité des données <br/>
+                            <small>utilisation des graphiques à chaque étapes des traitements</small>
 
-							abstraction des **complexités technologique** <br/>
-							<small>recettes visuelles, jointures assistées, multiplicité des connecteurs</small>
+                            abstraction des **complexités technologique** <br/>
+                            <small>recettes visuelles, jointures assistées, multiplicité des connecteurs</small>
 
-							déployabilité <br/>
-							<small>automation : partitionnements, scénarios, *triggering*</small>
-							</small>
+                            déployabilité <br/>
+                            <small>automation : partitionnements, scénarios, *triggering*</small>
+                            </small>
 
-						</textarea>
-					</section>		
-					<section data-background="img/background-valdon-dss.svg" data-markdown>
-						<textarea data-template>
-							### Points d'attention
-							#### encadrer et animer
-							<br/>
-							<small>
-							**méthode** et gestion de configuration <br/>
-							<small>codes, schémas de données, projets, mise en production</small>
+                        </textarea>
+                    </section>       
+                    <section data-background="img/background-valdon-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Points d'attention
+                            #### encadrer et animer
+                            <br/>
+                            <small>
+                            **méthode** et gestion de configuration <br/>
+                            <small>codes, schémas de données, projets, mise en production</small>
 
-							encadrement pour le **bon usage** des fonctions avancées <br/>
-							<small>graphiques, windowing, scénario</small>
+                            encadrement pour le **bon usage** des fonctions avancées <br/>
+                            <small>graphiques, windowing, scénario</small>
 
-							politique de développement des **compétences**
-							<small>analyse statistique, machine learning, développeur Python/Panda, R ou SQL, architectes des bases : Spark/Elasticsearch/Vertica…)</small>
-							</small>
-						</textarea>
-					</section>	
-					<section data-background="img/background-valdon-dss.svg" data-markdown>
-						<textarea data-template>
-							### Questions et contact
+                            politique de développement des **compétences**
+                            <small>analyse statistique, machine learning, développeur Python/Panda, R ou SQL, architectes des bases : Spark/Elasticsearch/Vertica…</small>
+                            </small>
+                        </textarea>
+                    </section>   
+                    <section data-background="img/background-valdon-dss.svg" data-markdown>
+                        <textarea data-template>
+                            ### Questions et contact
 
-							[https://github.com/rhanka/bigdataparis-2018](https://github.com/rhanka/)
+                            [https://github.com/rhanka/bigdataparis-2018](https://github.com/rhanka/)
 
-							[fabien.antoine@m4x.org](mailto:fabien.antoine@m4x.org)
+                            [fabien.antoine@m4x.org](mailto:fabien.antoine@m4x.org)
 
-						</textarea>
-					</section>																
-				</section>					
-				
+                        </textarea>
+                    </section>                                                               
+                </section>                   
+               
 
-			</div>
+            </div>
 
-		</div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
 
-		<script>
+        <script>
 
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/search/search.js', async: true },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>
