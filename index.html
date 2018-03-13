@@ -352,12 +352,17 @@
                     </section>
                     <section data-background="img/background-datalab-dss.svg" data-markdown>
                         <textarea data-template>
-                            ### Résultats
+                            RÉSULTATS
+                            <small>
+                            - intégration de **15 sources** de données dont géographiques (IGN, opendata accidents)
+                            - intégration de **4 méthodes** hétéroclites de traitement géographique : geohisto en python, addok/BAN par api et PostGis (projection sur segments routiers), recettes Dataiku (arbitrage du meilleur géocodage)
+                            - 98,7% de couverture du géocodage (contre 55% pour le meilleur algorithme : addok/BAN d'étalab)
+                            - 90% de géocodage de qualité suffisante pour une exploitation en dataviz géographique
 
-                            - 60% d'accidents géocodés à la première passe (BAN)
-                            - 90% avec un géocodage multiple
-                            - 
+                            </small>
+                            <img width="400" src="img/coord_invalides.png"><br/>
 
+                            
                         </textarea>
                     </section>
                     <section data-background="img/background-datalab-dss.svg" data-markdown>
